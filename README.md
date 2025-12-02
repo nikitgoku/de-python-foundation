@@ -1,4 +1,4 @@
-# de-python-foundation
+# Data Engineering: Python Foundations
 
 A minimal starter repository for learning and building Python fundamentals used in data engineering workflows. This project involves examples, exercises, and templates for best practices in coding, testing, and packaging.
 
@@ -16,11 +16,10 @@ Quick start:
 1. Clone the repo
    git clone [<repo-url>](https://github.com/nikitgoku/de-python-foundation.git)
 2. Create a virtual environment and install dependencies
-   python -m venv .venv
-   source .venv/bin/activate  # or .venv\Scripts\activate on Windows
-   pip install -r requirements.txt
+   `python -m venv .venv`
+   `source .venv/bin/activate`
 3. Run examples or tests
-   pytest -q
+   `pytest -q`
 
 
 ## Contributing
