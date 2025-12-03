@@ -2,12 +2,14 @@
 Mini Exercise. The task is to convert the "example_data.json" file into "example_data.csv" file
 using what we have learned
 """
+from pathlib import Path
 import csv
 import json
 
 # Store the file path
-__jsonFilePath__ = "/Users/nikit/Documents/dbt/code-space/de-python-foundation/day_2/json_files/example_data.json"
-__csvFilePath__ = "/Users/nikit/Documents/dbt/code-space/de-python-foundation/day_2/csv_files/example_data_converted.csv"
+config_file_path = Path(__file__).parent / "configs" / "config_file_books.ini"
+__jsonFilePath__ = Path(__file__).parent / "json_files" / "example_data.json"
+__csvFilePath__ = Path(__file__).parent / "csv_files" / "example_data_converted.csv"
 
 # Read the json file and store the JSON as Python Object
 with open(__jsonFilePath__, "r") as file:

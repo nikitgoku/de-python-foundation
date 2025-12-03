@@ -37,6 +37,10 @@ with open(__jsonFilePath__, 'r') as file:
 
 print(f"{json_data}")
 
+# From a string (like an API response)
+json_string = '{"name": "John", "age": 30}'
+json_data = json.loads(json_string)  # .loads() for strings
+
 # Unpacking usernames from the JSON data
 usernames = [data['username'] for data in json_data]
 print(f"{usernames}")
@@ -65,7 +69,7 @@ json_write_data = [
 ]
 
 with open(__jsonFileWritePath__, 'w') as file:
-    file.write(json.dumps(json_write_data))
+    file.write(json.dumps(json_write_data, indent=2))
 
 """
 When writing data from Python Objects to JSON, data conversion takes place, which means that some
