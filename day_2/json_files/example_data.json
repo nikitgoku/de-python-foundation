@@ -1,0 +1,26 @@
+[
+    {
+        "username": "userA",
+        "Platform": "Windows",
+        "email": "userA@company.com",
+        "device": "Laptop"
+    },
+    {
+        "username": "userB",
+        "Platform": "macOS",
+        "email": "userB@company.com",
+        "device": "Desktop"
+    },
+    {
+        "username": "userC",
+        "Platform": "Linux",
+        "email": "userC@company.com",
+        "device": "Tablet"
+    },
+    {
+        "username": "userD",
+        "Platform": "iOS",
+        "email": "userD@company.com",
+        "device": "Smartphone"
+    }
+]
