@@ -1,4 +1,4 @@
-# Python Foundations: File Handling
+# Day 2: Python Foundations: File Handling
 
 On day 2, I am mostly focusing on how config files and data files are handled. Generally this is how programming in real-time happens where in we will have configuration files which stores all the important information related to the program our code runs. Focussing on the data files is also in the agenda wherein working with CSV, JSON, etc files will be carried.
 

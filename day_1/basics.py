@@ -350,3 +350,5 @@ def greet(name):
     return f"Hello, {name}!"
 
 print(greet("Nikit"))  # Output: Hello, Nikit!
+
+print(f"{math.ceil(25/3)}")
