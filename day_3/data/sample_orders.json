@@ -1,0 +1,5 @@
+[
+  { "count": 1, "size": "small", "toppings": "extra_cheese", "crust_type": "neapolitan", "kind": "veg" },
+  { "count": 2, "size": "large", "toppings": "chicken", "crust_type": "thin_crust", "kind": "meat" },
+  { "count": 3, "size": "medium", "toppings": "veg", "crust_type": "deep_dish", "kind": "veg" }
+]
