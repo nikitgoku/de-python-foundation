@@ -183,4 +183,4 @@ Pizza example notes
 - pizza_order.py contains:
   - class Pizza: class-level price maps and instance attributes
   - describe_order(): logs a readable order summary
-  - calculate_price(): computes total price; currently uses dict.get() — consider validating keys and raising a clear error or providing defaults if a key is missing.
+  - calculate_price(): computes total price; currently uses dict.get(); consider validating keys and raising a clear error or providing defaults if a key is missing.
