@@ -1,29 +1,28 @@
 # Day 5 — Pandas Basics
 
-📚 Overview
+## Overview
 
-On Day 5, we focus on Pandas — a core library for data engineering workflows. You will learn how to load, explore, clean, transform, aggregate, join, visualize, and export structured datasets (CSV, JSON, Excel) using Pandas DataFrames.
+On Day 5, we focus on Pandas, a core library for data engineering workflows. You will learn how to **load, explore, clean, transform, aggregate, join, visualize,** and **export structured datasets** (CSV, JSON, Excel) using Pandas DataFrames.
 
-🧠 Key Concepts
+## Key Concepts (Cheat-Sheet)
 
-1. Creating DataFrames  
-   ✅ A DataFrame is an in-memory table (like SQL or Excel). Each column is a Series.
+1. **Creating DataFrames**
+   A DataFrame is a data structure that contains two-dimensional data along with labels corresponding to rows and columns. And each column is a Series.
 
-2. Reading Data from Files  
+2. **Reading Data from Files** 
    - `pd.read_csv(path)` — CSV  
    - `pd.read_json(path)` — JSON  
    - `pd.read_excel(path)` — Excel (requires openpyxl for .xlsx)
 
-3. Exploring and Selecting Data  
+3. **Exploring and Selecting Data**
    - `df.head()` — first rows  
    - `df.info()` — dtypes and non-null counts  
    - `df.shape` — (rows, cols)  
    - `df.columns` — column names  
-   - Select columns: `df[["month", "revenue"]]`  
-   - Filter rows: `df[df["revenue"] > 6000]`  
-   - Sort: `df.sort_values(by="revenue", ascending=False)`
+   - Select columns: `df[["Name", "Department"]]`  
+   - Filter rows: `df[df["Salary"] > 55000]`
 
-4. Cleaning and Transforming Data
+4. **Cleaning and Transforming Data**
    - Handling missing values: `dropna()`, `fillna()`  
    - Converting types: `df["col"] = df["col"].astype(int)`  
    - Renaming: `df.rename(columns={"old":"new"}, inplace=True)` (safe for full-DF ops)
@@ -31,23 +30,23 @@ On Day 5, we focus on Pandas — a core library for data engineering workflows. 
      - df.rename(..., inplace=True) — OK for whole DF
      - df["col"] = df["col"].fillna(x) — preferred for a single column (avoid chained assignment)
 
-   Quick rules:
+   *Quick rules*:
    - Use assignment for single-column changes: `df["col"] = ...`
    - Prefer vectorized operations (`.loc`, `np.where`) over `apply(axis=1)` for performance
 
-5. Aggregations and Grouping
+5. **Aggregations and Grouping**
    - `df.groupby("key")["metric"].agg(["sum","mean","count"])`
    - Useful for GROUP BY style summaries and pivot-like results
 
-6. Joining and Merging
-   - `pd.merge(left, right, on="key", how="inner")` — SQL-like joins  
-   - `pd.concat([df1, df2], ignore_index=True)` — stack vertically or horizontally
+6. **Joining and Merging**
+   - `pd.merge(left, right, on="key", how="inner")` : SQL-like joins  
+   - `pd.concat([df1, df2], ignore_index=True)` : stack vertically or horizontally
 
-7. Basic Visualization
+7. **Basic Visualization**
    - Use `Series.plot(kind="bar")` or `df.plot()` for simple charts (matplotlib backend)
    - Add titles/axis labels and `plt.tight_layout()` before `plt.show()`
 
-⚙️ Common Pitfalls & Best Practices
+**Common Pitfalls & Best Practices**
 - Always specify `encoding='utf-8'` when reading/writing external files unless needed otherwise.  
 - For CSV writing use `df.to_csv(path, index=False, encoding='utf-8')`.  
 - Avoid chained assignment that can trigger SettingWithCopyWarning. Assign back to the column.  
