@@ -10,12 +10,12 @@ A configuration file (config file) is a simple text file used to store settings 
 
 ### Why use config files?
 
-1. Separation of Concerns: Config files allow you to separate configuration settings from the main code, making it easier to manage and modify settings without changing the code itself.
-2. Flexibility: Config files provide flexibility to change settings without recompiling or redeploying the application.
-3. Reusability: Config files can be reused across different environments (development, testing, production) by simply changing the config file without modifying the code.
-4. Ease of Maintenance: Config files make it easier to maintain and update settings, especially in large applications with multiple configuration options.
+1. **Separation of Concerns**: Config files allow you to separate configuration settings from the main code, making it easier to manage and modify settings without changing the code itself.
+2. **Flexibility**: Config files provide flexibility to change settings without recompiling or redeploying the application.
+3. **Reusability**: Config files can be reused across different environments (development, testing, production) by simply changing the config file without modifying the code.
+4. **Ease of Maintenance**: Config files make it easier to maintain and update settings, especially in large applications with multiple configuration options.
 
-We'll use `.ini`, which is a simple text file used for configuration purposes. It consists of sections, each containing key-value pairs that define settings for an application. INI files are commonly used to store configuration data in a structured format that is easy to read and modify.
+We'll use `.ini`, which is a simple text file used for configuration purposes. It consists of sections, each containing **key-value pairs** that define settings for an application. INI files are commonly used to store configuration data in a structured format that is easy to read and modify.
 
 ---
 
@@ -35,18 +35,18 @@ JSON (JavaScript Object Notation) is a text format for structured data, using ob
 
 Key points:
 - Use json.load / json.loads to parse, json.dump / json.dumps to write.
-- Use indentation for readability (json.dump(fp, obj, indent=2)).
-- Control non-ASCII handling with ensure_ascii=False.
+- Use indentation for readability (json.dump(`fp`, `obj`, `indent=2`)).
+- Control non-ASCII handling with `ensure_ascii=False`.
 - Validate structure and handle missing keys gracefully.
 
 ---
 
 ## 3. Mini Exercises
 
-- mini_exercise_config_file.py
-  - Goal: Practice reading configuration files and carry on tasks using those configuration
+- `mini_exercise_config_file.py`
+  - **Goal**: Practice reading configuration files and carry on tasks using those configuration
 
-- mini_exercise_json_to_csv.py
-  - Goal: Practice parsing nested JSON and converting those parsed data into CSV.
+- `mini_exercise_json_to_csv.py`
+  - **Goal**: Practice parsing nested JSON and converting those parsed data into CSV.
 
 ----
