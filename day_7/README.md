@@ -18,9 +18,7 @@ day_7/
 │  ├── config.py           # Config loader (.env and defaults)
 │  ├── main.py             # Thin orchestrator: extract -> transform -> load
 │  └── __init__.py
-├── logs/                  # (Optional) runtime logs if configured
-├── .env.example           # Template env vars (PG + API)
-├── requirements.txt       # Python dependencies
+├── compose.yaml           # Python dependencies
 └── README.md              # This file
 ```
 
