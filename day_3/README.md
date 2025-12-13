@@ -1,9 +1,9 @@
 # Day 3 — Modular Programming and OOP Introduction
 
 This folder demonstrates a small package-style layout, relative imports, and a couple of example modules:
-- src/main — small CLI entry point demonstrating relative imports
-- src/greeting — greeting utility used by main
-- src/pizza_order_system — small domain model (Pizza) with pricing and logging
+- `src/main` — small CLI entry point demonstrating relative imports
+- `src/greeting` — greeting utility used by main
+- `src/pizza_order_system` — small domain model (Pizza) with pricing and logging
 This folder added comprehensive OOP examples using a pizza-order analogy.
 
 Purpose
