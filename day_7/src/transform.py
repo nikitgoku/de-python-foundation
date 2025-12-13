@@ -57,7 +57,7 @@ class Transformer:
         df_flattened.fillna("N/A", inplace=True)
 
         # Add metadata
-        df['ingestion_timestamp'] = datetime.now(timezone.utc)
+        df_flattened['ingestion_timestamp'] = datetime.now(timezone.utc)
 
         # Log the completion of the transformation process, summarising the 
         # transformed DataFrame
