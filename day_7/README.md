@@ -26,26 +26,26 @@ day_7/
 
 ## What each file does
 
-- extract.py
+- `extract.py`
   - Uses requests to call a REST API.
   - Builds a DataFrame from returned JSON; logs and returns an empty DataFrame on error.
 
-- transform.py
+- `transform.py`
   - Implements transform_posts() and other pure functions.
   - Validation, enforcing data types, parsing datetimes, flatenning, filling missing values.
 
-- load.py
+- `load.py`
   - Implements Loader which:
     - Loads existing unique key values from destination table,
     - Filters new rows from the incoming DataFrame,
     - Appends new rows to the table using pandas.to_sql (append),
     - Logs behavior and handles missing tables gracefully.
 
-- config.py
+- `config.py`
   - Loads configuration variables via config parser.
   - Exposes API_URL and a helper to construct the DB connection URL.
 
-- main.py
+- `main.py`
   - Thin orchestrator: instantiate components and run ETL:
     - raw <- Extractor.extract_posts_data()
     - df <- transform_posts_data(raw)
@@ -53,26 +53,26 @@ day_7/
 
 ## Key Concepts
 
-1. Separation of Concerns
+1. **Separation of Concerns**
    - Each module has one responsibility: extract, transform, or load.
    - Keeps code testable and easier to maintain.
 
-2. Idempotent / Incremental Loads
+2. **Idempotent / Incremental Loads**
    - The Loader inspects existing keys and only appends rows whose unique_key is not already present.
    - This prevents duplicates and supports re-runs of the pipeline.
 
-3. Robust Extraction
+3. **Robust Extraction**
    - Use timeouts and HTTP status checks during requests.
    - Return an empty DataFrame on extractor errors to avoid crashing the pipeline.
 
-4. Pure Transformations
+4. **Pure Transformations**
    - Transformation functions are pure: accept and return DataFrames.
    - This makes testing straightforward (no DB or network side-effects).
 
-5. Safe Database Writes
+5. **Safe Database Writes**
    - Use SQLAlchemy engine and context managers for safe writes (transactions).
    - Use to_sql with append/replace semantics depending on behavior needed.
 
-6. Configuration & Secrets
+6. **Configuration & Secrets**
    - Use .env to store secrets and environment settings (do not commit .env).
    - Use python-dotenv to load environment values for local development.
