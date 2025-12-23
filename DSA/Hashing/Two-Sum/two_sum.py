@@ -18,7 +18,7 @@ class Solution:
         return -1
     
 solution_object = Solution()
-logger.info(f"Solution Result Case 1: {solution_object.twoSum([2, 7, 11, 15], 9)}")
-logger.info(f"Solution Result Case 2: {solution_object.twoSum([3, 2, 4], 6)}")
-logger.info(f"Solution Result Case 3: {solution_object.twoSum([3, 3], 6)}")
-logger.info(f"Solution Result Case 4: {solution_object.twoSum([-3, 4, 3, 90], 0)}")
+logger.info(f"Result Case 1: {solution_object.twoSum([2, 7, 11, 15], 9)}")  # Expected: [0, 1]  (Order does not matter)
+logger.info(f"Result Case 2: {solution_object.twoSum([3, 2, 4], 6)}")       # Expected: [2, 3]  (Order does not matter)
+logger.info(f"Result Case 3: {solution_object.twoSum([3, 3], 6)}")          # Expected: [0, 1]  (Order does not matter)
+logger.info(f"Result Case 4: {solution_object.twoSum([-3, 4, 3, 90], 0)}")  # Expected: [2, 0]  (Order does not matter)
